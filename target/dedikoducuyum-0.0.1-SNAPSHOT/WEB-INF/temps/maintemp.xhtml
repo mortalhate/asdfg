@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>NWS</title>
+
+</h:head>
+<h:body>
+	<h:outputStylesheet name="style.css" />
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" class="center-borner-none">
+			<p:panel style="height: 120px; border-style: hidden">
+				<ui:include src="/WEB-INF/temps/headerBar.xhtml"></ui:include>
+			</p:panel>
+
+		</p:layoutUnit>
+		<p:layoutUnit position="west" size="300">
+			<h:form>
+				<p:panel header="Vote Events" style="border-style: none">
+					<ui:include src="/WEB-INF/temps/vote.xhtml"></ui:include>
+				</p:panel>
+
+			</h:form>
+		</p:layoutUnit>
+
+
+		<p:layoutUnit position="center">
+			<ui:insert name="centerContent"></ui:insert>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>
